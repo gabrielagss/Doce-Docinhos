@@ -1,0 +1,554 @@
+@charset "UTF-8";
+
+:root {
+    --cor1: #fdf8e5;
+    --cor2: #f8ccbf;
+    --cor3: #422d29;
+    --cor4: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.2em;
+    background: var(--cor1);
+}
+
+.container {
+    margin: 0 auto;
+}
+
+#topo {
+    position: fixed;
+    right: 10px;
+}
+
+.botao {
+    text-decoration: none;
+    color: var(--cor3);
+    font-size: 1.3em;
+    font-weight: 100;
+    background: var(--cor1);
+    padding: 8px 20px;
+    border: 3px solid var(--cor3);
+    border-radius: 25px;
+    margin: 0px 0px 0px 90px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    /*background: var(--cor);*/
+    height: 60px;
+}
+
+.flex1 {
+    display: flex;
+    flex-wrap: wrap;
+    /* quebrar linha quando tiver todo mundo junto*/
+    justify-content: space-evenly
+}
+
+.flex2 {
+    display: flex;
+    align-items: center;
+}
+
+.flex3 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex4 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#sobre h2 {
+    margin: 10px 0px 0px 500px;
+}
+
+.card {
+    margin: 20px 0px 20px 20px;
+    width: 300px;
+    height: 440px;
+    border: 3px solid var(--cor3);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card img {
+    height: 150px;
+    width: 250px;
+}
+
+.card h2 {
+    margin: 0px 0px 50px 100px;
+}
+
+.card h3 {
+    margin-top: 20px;
+}
+
+.card p {
+    text-align: left;
+    padding: 10px 30px 50px 30px;
+    color: var(--cor3);
+}
+
+.card a {
+    padding: 10px 100px;
+    border: 0;
+}
+
+.cardapio {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardapio h2 {
+    font-size: 2.3rem;
+    color: var(--cor3);
+    text-transform: uppercase;
+}
+
+.itens-cardapio {
+    width: 90%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 280px));
+    /* dizendo qual vai ser o tamanho das colunas ajudando na responsividade*/
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /* distancia que cada elemento vai ter, meio de cada item*/
+}
+
+.itens-cardapio .info {
+    background-color: var(--cor1);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem;
+}
+
+.itens-cardapio .info h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    text-decoration: underline;
+    color: var(--cor3);
+}
+
+.itens-cardapio .info h4 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 120px 120px;
+    margin-left: 1.3rem;
+    color: var(--cor3);
+}
+
+.itens-cardapio .info h4 span {
+    font-size: 1.2rem;
+    color: var(--cor3);
+    margin-left: 1.3rem;
+    text-decoration: underline;
+}
+
+.itens-cardapio div {
+    background-color: var(--cor1);
+    box-shadow: 0px 0px 4px 1px;
+    /*sombra que temos por volta da caixa*/
+
+}
+
+.itens-cardapio img {
+    width: 100%;
+    height: 200px;
+}
+
+/*Smartphone Portatil*/
+header {
+    height: 60px;
+    background-color: var(--cor2);
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+#check {
+    display: none;
+}
+
+label {
+    font-size: 2em;
+    position: fixed;
+    top: 5px;
+    right: 40px;
+    color: var(--cor1);
+}
+
+nav ul {
+    list-style: none;
+    background: var(--cor3);
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.55s;
+}
+
+#check:checked~ul {
+    right: 0;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid var(--cor1);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor1);
+}
+
+main {
+    height: 75vh;
+    background: url(img/logo1.2.png);
+    background-size: cover;
+    background-position: center;
+    color: var(--cor3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 3.0em;
+}
+
+main h2 {
+    font-size: 1.2em;
+    margin: 200px 0px 50px 0px;
+}
+
+/* bolinhos */
+
+#cupcake {
+    padding: 100px 40px 70px 50px;
+    background-color: var(--cor2);
+}
+
+#cupcake h2 {
+    margin: 0px 10px 20px 0px;
+    color: var(--cor3);
+}
+
+#cupcake img {
+    margin: 0px 10px 30px 0px;
+}
+
+.flex1 {
+    display: flex;
+    flex-wrap: wrap;
+    /* quebrar linha quando tiver todo mundo junto*/
+    justify-content: space-evenly
+}
+
+.flex3 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex4 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/*rodape*/
+address {
+    padding: 35px 10px 50px 10px;
+    background-color: var(--cor2);
+    background-size: cover;
+    background-position: center;
+    color: var(--cor3);
+}
+
+address a {
+    text-decoration: none;
+    color: var(--cor1);
+}
+
+address img {
+    padding-top: 15px;
+}
+
+.icone_local {
+    display: none;
+    /*escoder icones no cel*/
+}
+
+.dados {
+    margin: 30px 0px 15px 0px;
+}
+
+.google_maps {
+    display: none;
+}
+
+footer {
+    padding: 50px;
+    background: var(--cor3);
+    color: var(--cor1);
+    text-align: center;
+}
+
+.social {
+    margin-bottom: 25px;
+}
+
+/*Smartphone Landscape*/
+@media (min-width: 576px) {
+
+    /* body{
+        background: #d1d3d1;
+    }
+    /*layout*/
+    .container {
+        max-width: 540px;
+    }
+
+    main h1,
+    main h2 {
+        text-shadow: var(--cor3);
+    }
+
+    .logo img {
+        width: 189px;
+        height: 189px;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+
+    .flex1 {
+        display: flex;
+        flex-wrap: wrap;
+        /* quebrar linha quando tiver todo mundo junto*/
+        justify-content: space-evenly
+    }
+
+    .flex3 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .flex4 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+}
+
+/*Tablet Portatil*/
+@media (min-width: 768px) {
+
+    /*body{
+        background: #d1d3d1;
+    }
+     /*layout*/
+    .container {
+        max-width: 720px;
+    }
+
+    main {
+        height: 45vh;
+    }
+
+    main h1 {
+        font-size: 5.5em;
+    }
+
+    main h2 {
+        font-size: 2em;
+    }
+
+    .flex1 {
+        display: flex;
+        flex-wrap: wrap;
+        /* quebrar linha quando tiver todo mundo junto*/
+        justify-content: space-evenly
+    }
+
+    .flex3 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .flex4 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+/*Tablet Landscape*/
+@media (min-width: 992px) {
+
+    /*body{
+        background: #d1d3d1;
+    }
+     /*layout*/
+    .container {
+        max-width: 960px;
+    }
+
+    main {
+        height: 70vh;
+    }
+
+    .flex1 {
+        display: flex;
+        flex-wrap: wrap;
+        /* quebrar linha quando tiver todo mundo junto*/
+        justify-content: space-evenly
+    }
+
+    .flex3 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .flex4 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+/*PC*/
+@media (min-width:1200px) {
+
+    /*body{
+        background: #bbbbbb;
+    }
+     /*layout*/
+    .container {
+        max-width: 1140px;
+    }
+
+    header {
+        height: 125px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: var(--cor3)
+    }
+
+    /*sobre*/
+    .destaque_sobre {
+        display: inline;
+    }
+
+    .destaque_sobre img {
+        border-radius: 50px;
+        margin-right: 50px;
+    }
+
+    #sobre {
+        background-attachment: fixed;
+    }
+
+    /*One Page*/
+    .flex1 {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /*rodapé*/
+    .icone_local {
+        display: inline;
+    }
+
+    .icone_mapa {
+        display: none;
+    }
+
+    .google-maps {
+        display: inline;
+    }
+
+    .flex1 {
+        display: flex;
+        flex-wrap: wrap;
+        /* quebrar linha quando tiver todo mundo junto*/
+        justify-content: space-evenly
+    }
+
+    .flex3 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .flex4 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .flex6 {
+        flex-direction: row-reverse;
+    }
+    .botao {
+        text-decoration: none;
+        color: var(--cor3);
+        font-size: 1.3em;
+        font-weight: 100;
+        background: var(--cor1);
+        padding: 8px 20px;
+        border: 3px solid var(--cor3);
+        border-radius: 25px;
+        margin: 0px 0px 0px 700px;
+    }
+    
+}
